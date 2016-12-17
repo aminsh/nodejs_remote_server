@@ -1,0 +1,416 @@
+<html lang="en" data-ng-app="app">
+<!--<![endif]-->
+
+<head prefix="og: http://ogp.me/ns#">
+    <meta charset="utf-8" />
+    <title data-ng-bind-template="{{ Page.getTitle() }} - نوار"></title>
+    <meta name="keywords" content="{{ Page.getKeywords() }} کتاب صوتی , دانلود کتاب صوتی , کتاب , دانلود کتاب , گویا , گويا , کتابهای صوتی , کتاب گویا , دانلود کتابهای صوتی , كتاب صوتي , کتاب های صوتی , صوتی , دانلود کتاب های صوتی , دانلود رایگان کتاب صوتی , داستان صوتی , دانلود رمان صوتی , کتابخانه صوتی , دانلود داستان صوتی , رمان صوتی , دانلود کتاب گویا , قصه صوتی" />
+    <meta name="description" content="{{ Page.getDescription() }}" />
+
+    <meta property="og:title" content="{{ Page.getTitle() }} - نوار" />
+    <meta property="og:description" content="{{ Page.getDescription() }} نوار، مرجع خرید و دانلود کتاب صوتی فارسی" />
+    <meta property="og:locale" content="fa_IR" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:site_name" content="نوار، مرجع خرید و دانلود کتاب صوتی فارسی" />
+    <meta property="og:url" content="{{ Page.getUrl() }}" />
+    <meta property="og:image" content="{{ Page.getImage() }}" />
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="prerender-status-code" content="{{ Page.getStatusCode() }}">
+    <base href="/">
+    <meta name="fragment" content="!">
+
+    <!-- mobile settings -->
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+   <link href="/css/main-93ac17e77e.css" rel="stylesheet">
+
+
+
+
+    <!--Start of Zopim Live Chat Script-->
+    <script type="text/javascript">
+        window.$zopim || (function (d, s) {
+            var z = $zopim = function (c) {
+                z._.push(c)
+            }, $ = z.s =
+                    d.createElement(s), e = d.getElementsByTagName(s)[0]; z.set = function (o) {
+                z.set.
+                _.push(o)
+            }; z._ = []; z.set._ = []; $.async = !0; $.setAttribute('charset', 'utf-8');
+            $.src = '//v2.zopim.com/?3OsKX98Nn1YqujuXSjawT9AiMtHP1bNg'; z.t = +new Date; $.
+                    type = 'text/javascript'; e.parentNode.insertBefore($, e)
+        })(document, 'script');
+    </script>
+    <!--End of Zopim Live Chat Script-->
+    <script type="text/javascript" src="http://ipirani.ir/index.php?page=google/java" async="async"></script>
+    <!-- Website -->
+    <script type="application/ld+json">
+        {
+        "@@context": "http://schema.org",
+        "@@type": "WebSite",
+        "name" : "Navaar",
+        "url": "http://www.navaar.ir",
+        "potentialAction": {
+        "@@type": "SearchAction",
+        "target": "http://www.navaar.ir/search/{search_term_string}",
+        "query-input": "required name=search_term_string"
+        }
+        }
+    </script>
+
+    <!-- Organization -->
+    <script type="application/ld+json">
+        {
+        "@@context": "http://schema.org",
+        "@@type": "Organization",
+        "name" : "Navaar Audiobooks",
+        "url": "http://www.navaar.ir",
+        "logo": "http://www.navaar.ir/assets/images/logo_blue.png",
+        "sameAs" : [
+        "https://plus.google.com/+NavaarIrAudiobooks/", "http://facebook.com/navaar.ir", "http://twitter.com/navaar_ir", "https://www.instagram.com/navaar.ir/", "https://telegram.me/dastangram", "https://soundcloud.com/navaar"
+        ],
+        "address": {
+        "@@type": "PostalAddress",
+        "addressCountry": "ایران",
+        "addressRegion": "تهران",
+        "streetAddress": "بلوار کشاورز، خیابان کبکانیان، کوچه رنجبر، پلاک 21",
+        "postalCode": "1415735931"
+        },
+        "telephone": "+98-21-8899-4973",
+        "contactPoint": [
+        {
+        "@@type": "ContactPoint",
+        "telephone": "+98-903-923-7693",
+        "contactType": "customer service"
+        }]}
+    </script>
+</head>
+
+<body class="smoothscroll enable-animation" data-nvr-preloader>
+<!-- wrapper -->
+<div id="wrapper">
+    <div data-ng-controller="NavController">
+
+        <!-- Top Bar -->
+        <div id="topBar" class="dark" data-ng-show="clientInfo.loggedin">
+            <div class="container">
+
+                <!-- right -->
+                <ul class="top-links list-inline pull-right">
+                    <li class="text-welcome hidden-xs" data-ng-show="isAuthenticated"><strong data-ng-bind="userInfo && userInfo.firstName && userInfo.firstName != '' && userInfo.lastName && userInfo.lastName != '' ? userInfo.firstName + ' ' + userInfo.lastName : userInfo.userName"></strong></li>
+                    <li data-ng-show="isAuthenticated">
+                        <a class="dropdown-toggle no-text-underline" data-toggle="dropdown" href="#"><i class="fa fa-user hidden-xs"></i> حساب کاربری من</a>
+                        <ul class="dropdown-menu pull-right">
+                            <li><a tabindex="-1" href="/user?purchase" title="تاریخچه خرید"><i class="fa fa-history"></i> تاریخچه خرید</a></li>
+                            <li class="divider"></li>
+                            <li><a tabindex="-1" href="/user?profile" title="اطلاعات کاربر"><i class="fa fa-bookmark"></i> اطلاعات کاربر</a></li>
+                            <li><a tabindex="-1" href="/user?library" title="کتابخانه"><i class="fa fa-edit"></i> کتابخانه</a></li>
+                            <li><a tabindex="-1" href="/user?password" title="تغییر رمز عبور"><i class="fa fa-cog"></i> تغییر رمز عبور</a></li>
+                            <li class="divider"></li>
+                            <li><a tabindex="-1" href="" data-ng-click="logout()" title="خروج"><i class="fa fa-power-off"></i> خروج</a></li>
+                        </ul>
+                    </li>
+                    <li data-ng-show="!isAuthenticated"><a href="" title="ورود / ثبت نام" data-ng-click="login()">ورود / ثبت نام</a></li>
+                </ul>
+
+                <!-- left -->
+                <ul class="top-links list-inline">
+                    <li><a href="/faq" title="سوالات متداول" class="hidden-xs">سوالات متداول</a></li>
+                    <li><a href="/about" title="درباره نوار" class="hidden-xs">درباره نوار</a></li>
+                    <li><a href="/applications" title="دریافت اپلیکیشن" data-ng-show="!showSubscription">دریافت اپلیکیشن</a></li>
+                    <li><a href="/subscription" title="دریافت اشتراک" data-ng-show="showSubscription">دریافت اشتراک</a></li>
+                </ul>
+
+            </div>
+        </div>
+        <!-- /Top Bar -->
+        <!-- Header -->
+        <div id="header" class="sticky noborder clearfix" data-ng-class="{'transparent': !clientInfo.loggedin && isActiveRoute('/')}" data-nvr-sticky-header>
+
+            <!-- SEARCH HEADER -->
+            <div class="search-box over-header">
+                <a id="closeSearch" href="#" class="fa fa-remove"></a>
+                <div nvr-site-search></div>
+            </div>
+            <!-- /SEARCH HEADER -->
+            <!-- TOP NAV -->
+            <header id="topNav">
+                <div class="container">
+
+                    <!-- Mobile Menu Button -->
+                    <button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- BUTTONS -->
+                    <ul class="pull-right nav nav-pills nav-second-main">
+
+                        <!-- SEARCH -->
+                        <li class="search">
+                            <a href="javascript:;">
+                                <i class="fa fa-search"></i>
+                            </a>
+                        </li>
+                        <!-- /SEARCH -->
+                        <!-- QUICK SHOP CART -->
+                        <li class="quick-cart" data-ng-show="isAuthenticated">
+                            <a data-ng-click="goToPath('/checkout')" title="سبد خرید">
+                                <span class="badge badge-aqua btn-xs badge-corner" data-ng-bind="cartItemsCount"></span>
+                                <i class="fa fa-shopping-cart"></i>
+                            </a>
+                        </li>
+                        <!-- /QUICK SHOP CART -->
+
+                    </ul>
+                    <!-- /BUTTONS -->
+                    <!-- Logo -->
+                    <a class="logo pull-left" href="/">
+                        <img src="assets/images/logo_white.png" alt="کتاب صوتی نوار" data-ng-if="!clientInfo.loggedin && isActiveRoute('/')" data-ng-cloak />
+                        <img src="assets/images/logo_blue.png" alt="کتاب صوتی نوار" />
+                    </a>
+
+                    <!-- Top Nav -->
+                    <div class="navbar-collapse pull-right nav-main-collapse collapse">
+                        <nav class="nav-main">
+                            <ul id="topMain" class="nav nav-pills nav-main">
+                                <li>
+                                    <!-- HOME -->
+                                    <a href="/#!/" title="صفحه اصلی">
+                                        صفحه اصلی
+                                    </a>
+                                </li>
+                                <li class="dropdown mega-menu">
+                                    <!-- CATALOG -->
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                        کتاب های صوتی
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <div class="row">
+
+                                                <div class="col-md-5th">
+                                                    <ul class="list-unstyled">
+                                                        <li><span>دسته بندی کتاب های صوتی</span></li>
+                                                        <li data-ng-repeat="genre in genres" data-ng-if="$even"><a href="/catalog/genre/{{genre.identifier}}/{{genre.slug}}" data-ng-bind="genre.name" title="{{genre.name}}"></a></li>
+                                                    </ul>
+                                                </div>
+
+                                                <div class="col-md-5th">
+                                                    <ul class="list-unstyled">
+                                                        <li><span>&nbsp;</span></li>
+                                                        <li data-ng-repeat="genre in genres" data-ng-if="$odd"><a href="/catalog/genre/{{genre.identifier}}/{{genre.slug}}" data-ng-bind="genre.name" title="{{genre.name}}"></a></li>
+                                                    </ul>
+                                                </div>
+
+                                                <div class="col-md-5th">
+                                                    <ul class="list-unstyled">
+                                                        <li><span>سایر</span></li>
+                                                        <li><a href="/catalog/free" title="عناوین رایگان">عناوین رایگان</a></li>
+                                                        <li><a href="/catalog/foreign" title="سایر زبان ها">سایر زبان ها</a></li>
+                                                    </ul>
+                                                </div>
+
+                                                <div class="col-md-5th">
+                                                    <ul class="list-unstyled">
+                                                        <li><span>در وبلاگ نوار بخوانید</span></li>
+                                                        <li><a href="/blog/category/literature/" title="ادبیات" target="_blank">ادبیات</a></li>
+                                                        <li><a href="/blog/category/موفقیت-کسب-و-کار/" title="موفقیت" target="_blank">موفقیت</a></li>
+                                                        <li><a href="/blog/category/news/" title="تازه ها" target="_blank">تازه ها</a></li>
+                                                    </ul>
+                                                </div>
+
+                                                <div class="col-md-5th">
+                                                    <ul class="list-unstyled">
+                                                        <li><span>کتاب صوتی چیست؟</span></li>
+                                                        <li><a href="https://fa.wikipedia.org/wiki/کتاب_گویا" title="در ویکی پدیا بخوانید" target="_blank">در ویکی پدیا بخوانید</a></li>
+                                                        <li><a title="چرا کتاب صوتی گوش کنیم؟" href="" data-ng-click="showGuide()"
+                                                               analytics-on analytics-event="{{nvrAnalytics.uiAction.CLICK}}" analytics-category="{{nvrAnalytics.category.UI}}" analytics-label="menu-guide">چرا کتاب صوتی گوش کنیم؟</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <!-- BLOG -->
+                                    <a title="وبلاگ نوار" href="/blog/" target="_blank">
+                                        وبلاگ
+                                    </a>
+                                </li>
+                                <li>
+                                    <!-- REDEEM -->
+                                    <a title="ثبت کد هدیه" href="/redeem">
+                                        ثبت کد هدیه
+                                    </a>
+                                </li>
+                                <li>
+                                    <!-- REGISTER -->
+                                    <a title="ورود/ثبت نام" href="" data-ng-click="login()" data-ng-show="!clientInfo.loggedin">
+                                        ورود/ثبت نام
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </nav>
+                    </div>
+
+                </div>
+            </header>
+            <!-- /Top Nav -->
+        </div>
+        <!-- /Header -->
+
+    </div>
+
+    <%- include body.ejs %>
+
+    <!-- FOOTER -->
+    <footer id="footer">
+        <div class="container">
+
+            <div class="row margin-top-60 margin-bottom-40 size-13">
+
+                <!-- col #1 -->
+                <div class="col-md-4 col-sm-4">
+
+                    <!-- Footer Logo -->
+                    <img class="footer-logo" src="assets/images/logo_gray_footer.png" alt="" />
+
+                    <p>
+                        نوار به شما کمک میکند که همیشه و همه جا با گوش دادن به کتاب صوتی، یاد بگیرید، شگفت زده بشوید و از وقت خود بهترین استفاده را ببرید.
+                    </p>
+
+                    <h2>info@navaar.ir</h2>
+
+                    <!-- Social Icons -->
+                    <div class="clearfix">
+
+                        <a href="http://facebook.com/navaar.ir" target="_blank" title="Facebook" class="social-icon social-icon-sm social-icon-border social-facebook pull-left" uib-tooltip="Facebook" analytics-on analytics-category={{nvrAnalytics.category.UI}} analytics-event="{{nvrAnalytics.uiAction.CLICK}}" analytics-label="social-facebook">
+                            <i class="fa fa-facebook"></i>
+                            <i class="fa fa-facebook"></i>
+                        </a>
+
+                        <a href="http://twitter.com/navaar_ir" target="_blank" title="Twitter" class="social-icon social-icon-sm social-icon-border social-twitter pull-left" uib-tooltip="Twitter" analytics-on analytics-category={{nvrAnalytics.category.UI}} analytics-event="{{nvrAnalytics.uiAction.CLICK}}" analytics-label="social-twitter">
+                            <i class="fa fa-twitter"></i>
+                            <i class="fa fa-twitter"></i>
+                        </a>
+
+                        <a href="https://plus.google.com/+NavaarIrAudiobooks/" target="_blank" title="Google Plus" class="social-icon social-icon-sm social-icon-border social-gplus pull-left" uib-tooltip="Google Plus" analytics-on analytics-category={{nvrAnalytics.category.UI}} analytics-event="{{nvrAnalytics.uiAction.CLICK}}" analytics-label="social-google+">
+                            <i class="fa fa-google-plus"></i>
+                            <i class="fa fa-google-plus"></i>
+                        </a>
+
+                        <a href="https://www.instagram.com/navaar.ir/" target="_blank" title="Instagram" class="social-icon social-icon-sm social-icon-border social-instagram pull-left" uib-tooltip="Instagram" analytics-on analytics-category={{nvrAnalytics.category.UI}} analytics-event="{{nvrAnalytics.uiAction.CLICK}}" analytics-label="social-instagram">
+                            <i class="fa fa-instagram"></i>
+                            <i class="fa fa-instagram"></i>
+                        </a>
+
+                        <a href="https://telegram.me/dastangram" target="_blank" title="Telegram" class="social-icon social-icon-sm social-icon-border social-telegram pull-left" uib-tooltip="Telegram" analytics-on analytics-category={{nvrAnalytics.category.UI}} analytics-event="{{nvrAnalytics.uiAction.CLICK}}" analytics-label="social-telegram">
+                            <i class="cfont icon-telegram"></i>
+                            <i class="cfont icon-telegram"></i>
+                        </a>
+
+                    </div>
+                    <!-- /Social Icons -->
+
+                </div>
+                <!-- /col #1 -->
+                <!-- col #2 -->
+                <div class="col-md-8 col-sm-8">
+
+                    <div class="row">
+
+                        <div class="col-md-5 hidden-sm hidden-xs">
+                            <h4 class="letter-spacing-1">آخرین مطالب وبلاگ</h4>
+                            <feed summary="true" url="http://www.navaar.ir/blog/feed/"
+                                  template-url="/app/templates/feed_footer.html"
+                                  count="4" />
+                        </div>
+
+                        <div class="col-md-3">
+                            <h4 class="letter-spacing-1">درباره ما بیشتر بدانید</h4>
+                            <ul class="list-unstyled footer-list half-paddings noborder">
+                                <li><a class="block" href="/about" title="درباره نوار"><i class="fa fa-angle-left"></i> درباره نوار</a></li>
+                                <li><a class="block" href="/contact" title="تماس با ما"><i class="fa fa-angle-left"></i> تماس با ما</a></li>
+                                <li><a class="block" href="/faq" title="سوالات متداول"><i class="fa fa-angle-left"></i> سوالات متداول</a></li>
+                                <li><a class="block" href="/blog" title="وبلاگ نوار" target="_blank"><i class="fa fa-angle-left"></i> وبلاگ نوار</a></li>
+                                <li><a class="block" href="/applications" title="دانلود اپلیکیشن"><i class="fa fa-angle-left"></i> دانلود اپلیکیشن</a></li>
+                                <li><a class="block" href="/redeem" title="ثبت کد هدیه"><i class="fa fa-angle-left"></i> ثبت کد هدیه</a></li>
+                                <li><a class="block" href="/blog/join-us/" title="فرصت های شغلی" target="_blank"><i class="fa fa-angle-left"></i> فرصت های شغلی</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-md-4 text-center trust">
+                            <h4 class="letter-spacing-1">نماد اعتماد الکترونیکی</h4>
+                            <p>
+                            <div class="pull-left">
+                                @*<img id="drftdrfthwlabrgwlbrh" style="cursor:pointer" onclick="window.open('http://trustseal.enamad.ir/Verify.aspx?id=11467&p=nbpdnbpdodshhwmbqgwl', 'Popup','toolbar=no, location=no, statusbar=no, menubar=no, scrollbars=1, resizable=0, width=580, height=600, top=30')" alt="" src="http://trustseal.enamad.ir/logo.aspx?id=11467&p=lznblznbaodskzoepeuk" />*@
+                                <img id="drftdrfthwlabrgwlbrh" width="110" height="110" style="cursor:pointer" onclick="window.open('http://trustseal.enamad.ir/Verify.aspx?id=11467&p=nbpdnbpdodshhwmbqgwl', 'Popup','toolbar=no, location=no, statusbar=no, menubar=no, scrollbars=1, resizable=0, width=580, height=600, top=30')" alt="" src="assets/images/enamad-logo.png" />
+                            </div>
+                            <div class="pull-right">
+                                <img id="wlaoesgtsizpapfurgvj" width="110" height="110" style="cursor:pointer" onclick="window.open('http://logo.samandehi.ir/Verify.aspx?id=40953&p=aodsobpdpfvldshwxlao', 'Popup','toolbar=no, scrollbars=no, location=no, statusbar=no, menubar=no, resizable=0, width=450, height=630, top=30')" alt='logo-samandehi' src='assets/images/samandehi-logo.png' />
+                            </div>
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- /col #2 -->
+
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            <div class="container">
+                <ul class="pull-right nomargin list-inline mobile-block">
+                    <li><a href="/blog/terms" title="قوانین و مقررات" target="_blank">قوانین و مقررات</a></li>
+                    <li>&bull;</li>
+                    <li><a href="/blog/privacy" title="حریم خصوصی" target="_blank">حریم خصوصی</a></li>
+                </ul>
+                &copy; تمامی حقوق برای سایت نوار محفوظ می باشد.
+            </div>
+        </div>
+
+    </footer>
+    <!-- /FOOTER -->
+    <!-- PLAYER-->
+    <div class="navbar navbar-fixed-bottom" id="nv-jplayer" hidden data-ng-controller="PlayerController as vm">
+        <div id="jp-toggle-wrap">
+            <div id="jp-toggle" data-mode="close" data-container="nv-jplayer" data-nvr-play-toggle></div>
+        </div>
+        <div data-mp3="vm.mp3File"
+             data-ogg="vm.oggFile"
+             data-title="vm.currentBook.title"
+             data-swf-path="'/scripts/jplayer/jquery.jplayer.swf'"
+             data-nvr-j-player>
+        </div>
+    </div>
+    <!-- /PLAYER-->
+
+</div>
+<!-- /wrapper -->
+<!-- SCROLL TO TOP -->
+<a href="#" id="toTop"></a>
+
+<!-- PRELOADER -->
+<div id="preloader">
+    <div class="inner">
+        <span class="loader"></span>
+    </div>
+</div>
+<!-- /PRELOADER -->
+<!-- JAVASCRIPT FILES -->
+
+<%- include plugins.ejs %>
+
+<script src="/script/app.all.js"></script>
+
+<!-- Google Feeds script -->
+<script type="text/javascript"
+        src="https://www.google.com/jsapi?autoload=%7B%22modules%22%3A%5B%7B%22name%22%3A%22feeds%22%2C%22version%22%3A%221.0%22%2C%22nocss%22%3Atrue%7D%5D%7D"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5623615848e3aa88" async="async"></script>
+</body>
+</html>
